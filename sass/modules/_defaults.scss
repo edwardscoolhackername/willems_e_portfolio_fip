@@ -15,7 +15,7 @@ a {
 .mainHeader {
     background-color: $blackink;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     padding: .5em;
@@ -33,19 +33,44 @@ a {
     display: none;
 }
 .burgerButton {
+    margin: .5em;
     width: 30px;
     height: 30px;
-    transition: all 400ms ease;
+    transition: all 0.35s ease;
 }
+.burgerButton:hover {
+    cursor: pointer;
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+ .burgerButton.split {
+    transform: rotate(90deg);
+    position: relative;
+ }
+.burgerBox.expanded {
+    display: block;
+    position: fixed;
+    background-color: $blackink;
+    top: 10em;
+    left: 50%;
+    right: 50%;
+    transition: all 0.5 ease;
+}
+
+
 .navList {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
+.navList > li {
+    margin-bottom: 1em;
+}
 .navLink {
     margin: 1em;
     font-size: 3em;
 }
+
 .hereYouAre {
     text-decoration: underline;
 }
