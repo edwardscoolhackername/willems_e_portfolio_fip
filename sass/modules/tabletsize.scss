@@ -6,6 +6,7 @@
     }
     .mainHeader {
         justify-content: space-between;
+        flex-direction: row;
     }
     .navList {
         display: flex;
@@ -14,9 +15,16 @@
     .burgerBox {
         display: block;
     }
+    .burgerBox.expanded {
+        position: inherit;
+    }
+
     .navLink {
         margin: .7em;
         font-size: 1.4em;
+    }
+    .navList > li {
+        margin-bottom: 0;
     }
     .burgerButton {
         display: none;
@@ -24,6 +32,13 @@
     .socialLink {
         width: 2em;
         margin: .3em;
+    }
+
+    /* ====================================== INDEX =================== */
+    .inkbox {
+        background-image: url(/dist/papertexture_desktop.jpg);
+        background-size: auto 800px;
+        height: 800px;
     }
 
 }
