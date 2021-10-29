@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -20,9 +21,7 @@
   "dependencies": {
     "gulp": "^4.0.2",
     "gulp-sass": "^5.0.0",
-    "sass": "^1.42.1"
-  },
-  "devDependencies": {
+    "sass": "^1.42.1",
     "gulp-imagemin": "^8.0.0"
   }
 }
