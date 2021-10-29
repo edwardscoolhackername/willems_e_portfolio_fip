@@ -11,7 +11,7 @@ a {
     font-weight: bold;
     color: $whiteink;
 }
-
+/* =========================== HEADER/FOOTER ======================== */
 .mainHeader {
     background-color: $blackink;
     display: flex;
@@ -51,10 +51,13 @@ a {
     display: block;
     position: fixed;
     background-color: $blackink;
+    padding-top: 1em;
+    width: 350px;
+    height: 300px;
     top: 10em;
-    left: 50%;
-    right: 50%;
+    right: 20%;
     transition: all 0.5 ease;
+    z-index: 1;
 }
 
 
@@ -91,4 +94,27 @@ a {
 }
 .bottomLink {
     font-size: 1.4em;
+}
+
+
+/* =============================== INDEX =========================== */ 
+.inkbox {
+    background-image: url(/dist/papertexture.jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: auto 600px;
+    height: 600px;
+    overflow: hidden;
+    animation: fadein 5s forwards ease;
+}
+@keyframes fadein {
+    0% {
+        opacity: 0%;
+    }
+    40% {
+        opacity: 0%;
+    }
+    100% {
+        opacity: 100%;
+    }
 }
