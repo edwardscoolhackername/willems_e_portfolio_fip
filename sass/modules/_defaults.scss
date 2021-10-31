@@ -105,7 +105,10 @@ a {
     background-size: auto 600px;
     height: 600px;
     overflow: hidden;
-    animation: fadein 5s forwards ease;
+    animation: fadein 4s forwards ease;
+    display: grid;
+    grid-template-columns: 1fr 1fr 2fr;
+    grid-template-rows: 1fr 2fr 1fr;
 }
 @keyframes fadein {
     0% {
@@ -117,4 +120,30 @@ a {
     100% {
         opacity: 100%;
     }
+}
+.trail {
+    position: absolute;
+    height: 2.5em;
+    width: 2.5em;
+    background-image: url("/images/penspot.png");
+    background-repeat: no-repeat;
+    mix-blend-mode: darken;
+}
+.titlebox {
+    background-image: url("/images/brushstroke_black.png");
+    background-position: center;
+    width: 300px;
+    height: 100px;
+    grid-column: 2/3;
+    grid-row: 2/3;
+}
+.titlebox>h2 {
+    text-align: center;
+    font-family: $headerfont;
+    font-size: 2em;
+}
+.subtitle {
+    grid-column: 2/3;
+    grid-row: 3/4;
+    color: $blackink;
 }
