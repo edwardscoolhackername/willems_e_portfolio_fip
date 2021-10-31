@@ -39,6 +39,25 @@
         background-image: url(/dist/papertexture_desktop.jpg);
         background-size: auto 800px;
         height: 800px;
+        grid-template-columns: 1fr 1fr 2fr;
+    }
+    .titlebox {
+        grid-column: 3/4;
+    }
+    .subtitle {
+        grid-column: 3/4;
+    }
+
+    /* ============================== PORTFOLIO ====================== */
+    .categories {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(3, 1fr);
+        grid-gap: 1.5em;
+        margin: 0px auto;
+    }
+    .option {
+        max-width: 400px;
     }
 
 }

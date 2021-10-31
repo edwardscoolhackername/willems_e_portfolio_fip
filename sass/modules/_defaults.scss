@@ -107,8 +107,9 @@ a {
     overflow: hidden;
     animation: fadein 4s forwards ease;
     display: grid;
-    grid-template-columns: 1fr 1fr 2fr;
-    grid-template-rows: 1fr 2fr 1fr;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 2fr 1fr 1fr;
+    justify-content: center;
 }
 @keyframes fadein {
     0% {
@@ -127,23 +128,76 @@ a {
     width: 2.5em;
     background-image: url("/images/penspot.png");
     background-repeat: no-repeat;
-    mix-blend-mode: darken;
+    mix-blend-mode: multiply;
+    pointer-events: none;
 }
 .titlebox {
     background-image: url("/images/brushstroke_black.png");
     background-position: center;
     width: 300px;
-    height: 100px;
+    height: 70px;
     grid-column: 2/3;
     grid-row: 2/3;
 }
 .titlebox>h2 {
     text-align: center;
     font-family: $headerfont;
-    font-size: 2em;
+    font-size: 1.5em;
+    position: relative;
+    top: .8em;
 }
 .subtitle {
     grid-column: 2/3;
     grid-row: 3/4;
     color: $blackink;
+    text-align: center;
+    font-size: 1.5em;
+    max-width: 200px;
+}
+
+/* ================================= PORTFOLIO =================== */
+
+.videoContainer {
+    background-color: #606060;
+    width: auto;
+    height: 600px;
+}
+.videoContainer> p {
+    color: $whiteink;
+    position: relative;
+    left: 50%;
+    top: 50%;
+}
+.categories {
+    background-color: $blackink;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.portfolioHeader {
+    font-family: $headerfont;
+    font-size: 2em;
+    color: $blackink;
+    background-image: url("/dist/brushstroke_white.png");
+    text-align: center;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 1.2em;
+    margin: .5em;
+}
+.option {
+    border: 2px solid $whiteink;
+    margin-bottom: 1.5em;
+}
+.optionimage {
+    width: 300px;
+    height: 150px;
+    background-color: #606060;
+}
+.optiondescription {
+    padding: 1em;
+}
+.optiontitle {
+    color: $whiteink;
+    text-align: center;
 }
